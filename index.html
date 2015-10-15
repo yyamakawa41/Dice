@@ -1,0 +1,75 @@
+<script>
+
+function throwDie(){
+	var randomDie = Math.round(Math.random()*5) + 1;
+	document.images["myDie"].src = "d" + randomDie + ".gif";
+	console.log(randomDie);
+}
+
+function throwDice(){
+	var randomDie1 = Math.round(Math.random()*5) + 1;
+	var randomDie2 = Math.round(Math.random()*5) + 1;
+	document.images["myDie1"].src = "d" + randomDie1 + ".gif";
+	document.images["myDie2"].src = "d" + randomDie2 + ".gif";
+}
+
+</script>
+
+<!-- <img src="d1.gif" name = "myDie">
+<input type="button" value="Throw the die" onclick="throwDie();">
+ -->
+<!-- <div>
+	<img src="d1.gif" name="myDie1">
+	<img src="d1.gif" name="myDie2">
+</div>
+ -->
+<!-- <input type="button" value="Throw the dice!" onclick="throwDice();"> -->
+
+<div id="the-fight" style="text-align: center;">
+
+	<img src="dragon.png">
+	<div id="dragon" style="font-size: 30px;">You have encountered a dragon, do you wan to attack?</div>
+		<div>
+			<img src="d1.gif" name="myDie1">
+			<img src="d1.gif" name="myDie2">
+		</div>
+	<div id="message" style="font-size: 20px margin-top: 20px;">You must roll higher than a 9, to defeat the dragon.</div>
+
+	<input type="button" value="Fight!" onclick="attackDragon()">
+	<input type="button" value="Run Away!" onclick='document.getElementById("message").innerHTML = "Where are you running off to?"'>
+	<div id="your-roll"></div>
+</div>
+
+<script>
+	function attackDragon(){
+	var randomDie1 = Math.round(Math.random()*5) + 1;
+	var randomDie2 = Math.round(Math.random()*5) + 1;
+	document.images["myDie1"].src = "d" + randomDie1 + ".gif";
+	document.images["myDie2"].src = "d" + randomDie2 + ".gif";
+	
+	
+	var totalRoll = randomDie1 + randomDie2;
+	document.getElementById("your-roll").innerHTML = "You have rolled a " + totalRoll;
+
+	if (totalRoll > 9){
+		document.getElementById("message").innerHTML = "You rolled a " + totalRoll + ". You live to see another day!";
+	}
+
+	else{
+		document.getElementById("message").innerHTML = "You rolled a " + totalRoll + ". You are DEAD!";
+	}
+}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
