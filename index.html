@@ -49,7 +49,7 @@ function throwDice(){
 	
 	
 	var totalRoll = randomDie1 + randomDie2;
-	document.getElementById("your-roll").innerHTML = "You have rolled a " + totalRoll;
+	// document.getElementById("your-roll").innerHTML = "You have rolled a " + totalRoll;
 
 	if (totalRoll > 9){
 		document.getElementById("message").innerHTML = "You rolled a " + totalRoll + ". You live to see another day!";
@@ -61,12 +61,31 @@ function throwDice(){
 }
 	
 
+ 	//Dates
+ 	var now = new Date();
+ 	console.log(now);
+ 	// now.toString;
 
+ 	var theDay = now.getDay(); //Return the numbered day of the week with Sunday (0)
 
+ 	var daysInEnglish = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+ 	var theDayInEnglish = daysInEnglish[theDay];
+ 	console.log(theDayInEnglish);
 
+ 	for(i=0; i < 10; i++){
 
+ 	}
+ 	while (i<10){
+ 		console.log(i);
+ 		i++
+ 	}
 
-
+ 	//Do While Loop
+ 	var i=0;
+ 	do{
+ 		console.log(i);
+ 		i++
+ 	} while (i<=3);
 
 
 
